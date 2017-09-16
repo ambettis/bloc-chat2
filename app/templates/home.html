@@ -1,1 +1,61 @@
 <h3>Welcome Home</h3>
+
+<ul ng-repeat='room in home.rooms'>
+    <li>{{ room.name }}</li>
+</ul>
+
+// build out a proper page and form. ng-submit takes the input data (ng-model) and fires off a function that sends that data to the controller
+// in the home controller, build the addRoom funciton that accepts that data and fires off the function in the Room service
+// build the function in the room service that adds the new room to Firebase ({name: newRoomName})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form>
+  <input type="text" name="" value="" ng-model='newRoomName' placeholder="what is your new room name">
+  <input type="submit" name="" value="Add" ng-click='home.addRoom(newRoomName)'>
+</form>

@@ -13,11 +13,6 @@ angular.module('blocChat', ['ui.router']);
              url: '/',
              controller: 'HomeCtrl as home',
              templateUrl: '/templates/home.html'
-         })
-         .state('about', {
-             url: '/about',
-             controller: 'AboutCtrl as about',
-             templateUrl: '/templates/about.html'
          });
   }
 
