@@ -1,7 +1,10 @@
 (function() {
     function HomeCtrl(Room) {
-      this.rooms = Room.all
+      this.rooms = Room.all;
 
+      this.addRoom = function (newRoom){
+        Room.addRoom(newRoom);
+      }
     }
 
     angular
@@ -73,8 +76,8 @@
 
 
 
-
-
-this.addRoom = function(newRoomName) {
-  Room.addRoom(newRoomName)
-}
+//
+// //
+// this.addRoom = function(newRoomName) {
+//   Room.addRoom(newRoomName)
+// }
