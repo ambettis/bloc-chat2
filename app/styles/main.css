@@ -1,26 +1,50 @@
-h4 {
-  font-weight: 100;
+
+ul{
+  list-style-type: none;
+  color: black;
+}
+.navbar {
+  height: 100%;
+  width: 25%;
+  background-color: skyblue;
+  padding: 1.5rem;
+  position: inherit;
+  top: 0;
+  left: 0;
+  float:left;
+  display:inline;
 }
 
-li {
-  width: 33%;
-  text-align: left;
-  background-color: grey;
+/*.messages {
+  float: right;
+  height: 1000px;
+}*/
+
+table{
+  height: 5000px;
+  width: 75%;
+  float:left;
+  display:inline;
+  width: 49%;
 }
 
-div.form {
-  display: block;
-  text-align: center;
+tr:nth-child(even){
+  background-color: white;
 }
 
-form{
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  height: 100px;
-  width: 300px;
-  padding-left: 85px;
-  padding-top: 85px;
-  background-color: grey;
+tr:nth-child(odd){
+  background-color: lightgrey;
+}
+
+tr{
+  height: 50px;
+  width: 5000px;
+}
+
+td {
+  width: 8000px;
+}
+
+.message-time{
+  text-align:;
 }

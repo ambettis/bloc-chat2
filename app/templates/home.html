@@ -1,59 +1,34 @@
-<h3>Welcome Home</h3>
-
-<ul ng-repeat='room in home.rooms'>
-    <li>{{ room.name }}</li>
-</ul>
-
-<!-- // build out a proper page and form. ng-submit takes the input data (ng-model) and fires off a function that sends that data to the controller -->
-
-
-<div class="form">
+<div class = "navbar">
+  <div class = "header">
+    <h1 class="title">Bloc Chat Rooms</h1>
+  </div>
+  <div class="rooms-list">
+    <ul ng-repeat='room in home.rooms' class="chatrooms">
+      <li ng-click="home.setRoom(room.$id)">{{ room.name }} </li>
+    </ul>
+  </div>
   <form>
     <input type="text" name="" value="" ng-model="newRoom" placeholder="new room name?">
-    <input type="submit" name="" value="Add Rooom" ng-click = "home.addRoom(newRoom)">
-    <!-- <button type="button" name="button" ng-submit = "home.add(newRoom)">Add Room</button> -->
+    <input type="submit" name="" value="Add Rooom" ng-click="home.addRoom(newRoom)">
   </form>
 </div>
 
-<!-- // in the home controller, build the addRoom funciton that accepts that data and fires off the function in the Room service
-// build the function in the room service that adds the new room to Firebase ({name: newRoomName}) -->
+<!-- // build out a proper page and form. ng-submit takes the input data (ng-model) and fires off a function that sends that data to the controller -->
 
+<div class="messages">
+  <table>
+    <tr ng-repeat="message in home.messages">
+      <td>
+        <p class="message-username"><strong>{{ message.username}}</strong> {{ message.sentAt }}</p>
+        <p class="message-content">{{ message.content }}</p>
+      </td>
+    </tr>
+  </table>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-<form>
-  <input type="text" name="" value="" ng-model='newRoomName' placeholder="what is your new room name">
-  <input type="submit" name="" value="Add" ng-click='home.addRoom(newRoomName)'>
-</form> -->
+<div class="new-message">
+  <form ng-submit="home.addMessage(newMessage)">
+    <input type="text" name="" value="" ng-model="newMessage" placeholder="Type your message here...">
+    <input type="submit" name="" value="Submit">
+  </form>
+</div>
